@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGreen Energy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilo para o cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2e7d32; /* Cor do site */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para o menu de navegação */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            background-color: #2e7d32; /* Cor do site */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #2e7d32; /* Cor do site */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: 'Arial', sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li a:hover {
+            background-color: #1b5e20; /* Cor mais escura para hover */
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Esconde todas as seções inicialmente */
+        .form-container, .about-container {
+            display: none;
+        }
+
+        /* Estilo para a seção principal */
+        #home {
+            display: block;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilo para o texto personalizado */
+        #home p {
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+            color: #2e7d32; /* Cor do site */
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o vídeo */
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilo para a seção Sobre */
+        .about-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-container h2 {
+            color: #2e7d32; /* Cor do site */
+        }
+
+        .about-container p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à iGreen Energy</h1>
+        <p>Escolha uma categoria abaixo para continuar.</p>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Início</a></li>
+                <li><a href="#about" onclick="showSection('about')">Sobre</a></li>
+                <li><a href="#support" onclick="showSection('support')">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de Início -->
+        <section id="home">
+            <h2>Bem-vindo à iGreen Energy</h2>
+            <p style="background-color: orange; color: white; padding: 10px; border-radius: 5px; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 165, 0, 0.8);">
+                É isso mesmo, economize até 15% na sua conta de energia sem investimentos!
+            </p>
+            <p>Conheça agora a oportunidade da iGreen Energy e descubra como você pode começar a economizar na energia do seu lar, comércio e/ou empresa!</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qNlJevw_S5Y" 
+                    title="Vídeo sobre energia solar" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="about-container">
+            <h2>Somos a iGreen Energy</h2>
+            <p>
+                Nascemos com o propósito de conscientizar as pessoas e empresas da importância de um futuro melhor através de práticas sustentáveis. 
+                A nossa missão é dar a possibilidade de utilizarem uma energia limpa, renovável e inesgotável sem agredir o meio ambiente.
+            </p>
+            <p>
+                Estamos impactando não só o Brasil, mas o mundo. Juntos vamos transformar a vida das pessoas, democratizando o uso de uma energia limpa 
+                e mais econômica através de fontes energéticas sustentáveis e com a mais alta tecnologia desenvolvida pela iGreen a nosso favor.
+            </p>
+            <a href="#home" onclick="showSection('home')" class="back-button">Voltar para Início</a>
+        </section>
+
+        <!-- Seção de Suporte -->
+        <section id="support" class="form-container">
+            <h2>Suporte</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://wa.me/5575982603544?text=Olá,%20preciso%20de%20ajuda%20com%20o%20suporte%20da%20iGreen%20Energy!" 
+                   target="_blank" 
+                   style="display: inline-block; padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                    Contate-nos pelo WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 iGreen Energy. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para exibir apenas a seção selecionada
+        function showSection(sectionId) {
+            // Esconde todas as seções
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Exibe a seção correspondente
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
